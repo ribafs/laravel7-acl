@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>{{ config('app.name', 'ACL to Laravel 8') }}</title>
+        <title>{{ config('app.name', 'ACL to Laravel 7') }}</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -94,7 +94,7 @@
 
             <div class="content">
                 <div><h1>
-                    {{ config('app.name', 'ACL to Laravel 8') }}
+                    {{ config('app.name', 'ACL to Laravel 7') }}
                     </h1>
                 </div>
 <pre>

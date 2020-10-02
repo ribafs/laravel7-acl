@@ -1,8 +1,4 @@
 <div class="col-md-2">
-<!--
-A ESPERA DE UMA UTILIDADE
-Para tabelas com mais campos devemos remover o sidebar da view para deixar uma Ã¡rea maior para os mesmos
--->
     <div class="card">
         <div class="card-header">
             Menu
@@ -58,7 +54,7 @@ Para tabelas com mais campos devemos remover o sidebar da view para deixar uma Ã
             </ul>
             <ul class="nav" role="tablist">
                 <li role="presentation">
-                    <a href="{{ url('/roles') }}">
+                    <a href="{{ url('/admin/roles') }}">
                         - Roles
                     </a>
                 </li>

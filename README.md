@@ -7,9 +7,14 @@ Usando users, roles, permissions, trait, middleware, provider, etc
 
 ### Recomenda-se criar um novo aplicativo com laravel 8 para testar o laravel7-acl
 
-laravel new acl7
+laravel new acl7 --auth
 
 cd acl7
+
+composer require laravel/ui --dev
+php artisan ui bootstrap --auth
+npm install && npm run dev
+npm audit fix
 
 
 ### Criar e configurar o banco

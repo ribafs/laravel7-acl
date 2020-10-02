@@ -1,8 +1,8 @@
 <?php
 use Illuminate\Database\Seeder;
-use App\Models\Permission;
-use App\Models\Role;
-use App\Models\User;
+use App\Permission;
+use App\Role;
+use App\User;
 
 class PermissionsSeeder extends Seeder
 {

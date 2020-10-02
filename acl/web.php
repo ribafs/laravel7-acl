@@ -22,9 +22,13 @@ Route::middleware(['auth'])->get('/home', function () {
 })->name('home');
 
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function(){
-    Route::resource('users', 'App\Http\Controllers\Admin\UserController');
-    Route::resource('roles', 'App\Http\Controllers\Admin\RoleController');
-    Route::resource('permissions', 'App\Http\Controllers\Admin\PermissionController');
-    Route::resource('clients', 'App\Http\Controllers\Admin\ClientController');
+    Route::resource('users', 'Admin\UserController');
+    Route::resource('roles', 'Admin\RoleController');
+    Route::resource('permissions', 'Admin\PermissionController');
+    Route::resource('clients', 'Admin\ClientController');
 });
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
