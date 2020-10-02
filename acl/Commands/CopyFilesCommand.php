@@ -27,10 +27,10 @@ class CopyFilesCommand extends Command
      */
     public function handle()
     {
-        $seeder = base_path('database/seeders/DatabaseSeeder.php');
+        $seeder = base_path('database/seeds/DatabaseSeeder.php');
         if(File::exists($seeder)){
-            File::copy($seeder, base_path('database/seeders/DatabaseSeederBAK.php'));
-            File::copy(base_path('vendor/ribafs/laravel7-acl/acl/seeders/DatabaseSeeder.php'), base_path('database/seeders/DatabaseSeeder.php'));
+            File::copy($seeder, base_path('database/seeds/DatabaseSeederBAK.php'));
+            File::copy(base_path('vendor/ribafs/laravel7-acl/acl/seeds/DatabaseSeeder.php'), base_path('database/seeds/DatabaseSeeder.php'));
         }
         $route = base_path('routes/web.php');
         if(File::exists($route)){
