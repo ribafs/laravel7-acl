@@ -9,7 +9,7 @@ Para um pacote exclusivo para a versão 8 do laravel
 
 
 ### Criar um novo aplicativo com laravel 7
-
+```bash
 laravel new acl7 --auth
 
 cd acl7
@@ -18,6 +18,7 @@ composer require laravel/ui --dev
 php artisan ui bootstrap --auth
 npm install && npm run dev
 npm audit fix
+```
 
 ### Criar e configurar o banco
 .env
@@ -50,14 +51,14 @@ php artisan copy:files
 
 ### Registrar o middleware
 
-Editar o app/Http/Kernel.php e adicionar ao array $routeMiddleware = [
+Editar o app/Http/Kernel.php e adicionar ao array $routeMiddleware
 ```bash
         'role' => \Illuminate\Auth\Middleware\RoleMiddleware::class,
 ```
 
 ### Registrar o provider
 
-Editar o config\app.php e adicione ao array 'providers' => [
+Editar o config\app.php e adicione ao array 'providers'
 ```bash
         App\Providers\PermissionsServiceProvider::class,
 ```
