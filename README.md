@@ -8,7 +8,7 @@ Para um pacote exclusivo para a versão 8 do laravel
 [https://github.com/ribafs/laravel-acl](https://github.com/ribafs/laravel-acl)
 
 
-### Criar um novo aplicativo com laravel 7 para testar o laravel7-acl
+### Criar um novo aplicativo com laravel 7
 
 laravel new acl7 --auth
 
