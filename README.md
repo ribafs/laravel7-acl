@@ -98,7 +98,7 @@ Depois teste com os demais: admin, manager e user
 
 ## Documentação
 
-Confira os passos detalhados da instalação, das configurações e mais informações no site de documentação
+As informações acima e muito mais informações de como tirar o máximo proveito deste pacote no site abaixo:
 
 [https://ribafs.github.io/laravel7-acl/](https://ribafs.github.io/laravel7-acl/)
 
