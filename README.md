@@ -1,13 +1,6 @@
 # Implementação de ACL no Laravel 7
 Usando users, roles, permissions, trait, middleware, provider, etc
 
-## Versão para Laravel 8
-
-Para um pacote exclusivo para a versão 8 do laravel
-
-[https://github.com/ribafs/laravel-acl](https://github.com/ribafs/laravel-acl)
-
-
 ### Criar um novo aplicativo com laravel 7
 ```bash
 laravel new acl7 --auth
@@ -104,3 +97,10 @@ Depois teste com os demais: admin, manager e user
 Confira os passos detalhados da instalação, das configurações e mais informações no site de documentação
 
 [https://ribafs.github.io/laravel7-acl/](https://ribafs.github.io/laravel7-acl/)
+
+
+## Versão exclusiva para Laravel 8
+
+Se deseja um pacote para usar com a versão 8 do laravel, clique abaixo:
+
+[https://github.com/ribafs/laravel-acl](https://github.com/ribafs/laravel-acl)
