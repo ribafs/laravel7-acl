@@ -1,5 +1,11 @@
-# Pacote com implementação de ACL no Laravel 7
+# Implementação de ACL no Laravel 7
 Usando users, roles, permissions, trait, middleware, provider, etc
+
+## Versão para Laravel 8
+
+Para um pacote exclusivo para a versão 8 do laravel
+
+[https://github.com/ribafs/laravel-acl](https://github.com/ribafs/laravel-acl)
 
 [![Latest Version on Packagist][ico-version]][link-packagist]
 
