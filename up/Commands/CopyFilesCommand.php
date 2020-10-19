@@ -25,6 +25,8 @@ class CopyFilesCommand extends Command
 
         File::copy(base_path('vendor/ribafs/laravel7-acl/up/web.php'), base_path('routes/web.php'));
 
+        File::copy(base_path('vendor/ribafs/laravel7-acl/up/api.php'), base_path('routes/api.php'));
+
         File::copy(base_path('vendor/ribafs/laravel7-acl/up/welcome.blade.php'), base_path('resources/views/welcome.blade.php'));
 
         File::copy(base_path('vendor/ribafs/laravel7-acl/up/home.blade.php'), base_path('resources/views/home.blade.php'));
