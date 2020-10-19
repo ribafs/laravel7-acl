@@ -9,7 +9,7 @@
         <meta name="description" content="ACL Implementation to Laravel 8">
       
       
-        <link rel="canonical" href="https://ribafs.github.io/routes/">
+        <link rel="canonical" href="https://ribafs.github.io/AvisoLocal/">
       
       
         <meta name="author" content="Ribamar FS">
@@ -19,7 +19,7 @@
     
     
       
-        <title>Rotas - Laravel 7 ACL</title>
+        <title>Aviso - Laravel 7 ACL</title>
       
     
     
@@ -67,11 +67,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#rotas" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -96,7 +91,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Rotas
+              Aviso
             
           </span>
         </div>
@@ -226,20 +221,11 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-    <a href="./" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../routes/" class="md-nav__link">
       Rotas
     </a>
-    
   </li>
 
     
@@ -403,11 +389,18 @@
       
       
 
+  
 
-  <li class="md-nav__item">
-    <a href="../AvisoLocal/" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
       Aviso
     </a>
+    
   </li>
 
     
@@ -418,99 +411,16 @@
               </div>
             
             
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-    
-  
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
               
                 
                 
-                <h1 id="rotas">Rotas</h1>
-<p>As rotas deste projeto são específicas com algumas nuances próprias.</p>
-<p>Confira.</p>
-<table class="php codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34</pre></div></td><td class="code"><div class="php codehilite"><pre><span></span><code><span class="cp">&lt;?php</span>
-<span class="k">use</span> <span class="nx">Illuminate\Support\Facades\Route</span><span class="p">;</span>
-<span class="k">use</span> <span class="nx">Illuminate\Support\Facades\Auth</span><span class="p">;</span>
-
-<span class="nx">Route</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="k">function</span> <span class="p">()</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="nx">view</span><span class="p">(</span><span class="s1">&#39;welcome&#39;</span><span class="p">);</span>
-<span class="p">});</span>
-
-
-<span class="nx">Auth</span><span class="o">::</span><span class="na">routes</span><span class="p">();</span>
-
-<span class="nx">Route</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;/home&#39;</span><span class="p">,</span> <span class="s1">&#39;HomeController@index&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">name</span><span class="p">(</span><span class="s1">&#39;home&#39;</span><span class="p">);</span>
-
-<span class="nx">Route</span><span class="o">::</span><span class="na">middleware</span><span class="p">([</span><span class="s1">&#39;auth&#39;</span><span class="p">])</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;/home&#39;</span><span class="p">,</span> <span class="k">function</span> <span class="p">()</span> <span class="p">{</span>
-    <span class="nv">$super</span> <span class="o">=</span> <span class="nx">Auth</span><span class="o">::</span><span class="na">user</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">hasRole</span><span class="p">(</span><span class="s1">&#39;super&#39;</span><span class="p">);</span>
-    <span class="nv">$admin</span> <span class="o">=</span> <span class="nx">Auth</span><span class="o">::</span><span class="na">user</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">hasRole</span><span class="p">(</span><span class="s1">&#39;admin&#39;</span><span class="p">);</span>
-    <span class="nv">$manager</span> <span class="o">=</span> <span class="nx">Auth</span><span class="o">::</span><span class="na">user</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">hasRole</span><span class="p">(</span><span class="s1">&#39;manager&#39;</span><span class="p">);</span>
-    <span class="nv">$user</span> <span class="o">=</span> <span class="nx">Auth</span><span class="o">::</span><span class="na">user</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">hasRole</span><span class="p">(</span><span class="s1">&#39;user&#39;</span><span class="p">);</span>
-
-    <span class="k">if</span><span class="p">(</span><span class="nv">$super</span> <span class="o">||</span> <span class="nv">$admin</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="nx">redirect</span><span class="p">(</span><span class="s1">&#39;/admin/users&#39;</span><span class="p">);</span>
-    <span class="p">}</span><span class="k">elseif</span><span class="p">(</span><span class="nv">$manager</span> <span class="o">||</span> <span class="nv">$user</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="nx">redirect</span><span class="p">(</span><span class="s1">&#39;/admin/clients&#39;</span><span class="p">);</span>
-    <span class="p">}</span><span class="k">else</span><span class="p">{</span>
-        <span class="k">return</span> <span class="nx">view</span><span class="p">(</span><span class="s1">&#39;/home&#39;</span><span class="p">);</span>
-    <span class="p">}</span>
-<span class="p">})</span><span class="o">-&gt;</span><span class="na">name</span><span class="p">(</span><span class="s1">&#39;home&#39;</span><span class="p">);</span>
-
-<span class="nx">Route</span><span class="o">::</span><span class="na">group</span><span class="p">([</span><span class="s1">&#39;prefix&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;admin&#39;</span><span class="p">,</span> <span class="s1">&#39;middleware&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;auth&#39;</span><span class="p">],</span> <span class="k">function</span><span class="p">(){</span>
-    <span class="nx">Route</span><span class="o">::</span><span class="na">resource</span><span class="p">(</span><span class="s1">&#39;users&#39;</span><span class="p">,</span> <span class="s1">&#39;Admin\UserController&#39;</span><span class="p">);</span>
-    <span class="nx">Route</span><span class="o">::</span><span class="na">resource</span><span class="p">(</span><span class="s1">&#39;roles&#39;</span><span class="p">,</span> <span class="s1">&#39;Admin\RoleController&#39;</span><span class="p">);</span>
-    <span class="nx">Route</span><span class="o">::</span><span class="na">resource</span><span class="p">(</span><span class="s1">&#39;permissions&#39;</span><span class="p">,</span> <span class="s1">&#39;Admin\PermissionController&#39;</span><span class="p">);</span>
-    <span class="nx">Route</span><span class="o">::</span><span class="na">resource</span><span class="p">(</span><span class="s1">&#39;clients&#39;</span><span class="p">,</span> <span class="s1">&#39;Admin\ClientController&#39;</span><span class="p">);</span>
-<span class="p">});</span>
-</code></pre></div>
-</td></tr></table>
+                  <h1>Aviso</h1>
+                
+                <p>Para visualizar corretamente esta documentação estando em seu desktop abra no diretório web, exemplo:</p>
+<p>http://localhost/laravel-acl/docs</p>
                 
               
               
@@ -529,7 +439,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../views/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../credits/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -538,25 +448,11 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Views
+                Créditos
               </div>
             </div>
           </a>
         
-        
-          <a href="../seeds/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                Seeds
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
         
       </nav>
     </div>

@@ -250,13 +250,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#publicar" class="md-nav__link">
-    Publicar
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#copiar-alguns-arquivos-existentes" class="md-nav__link">
     Copiar alguns arquivos existentes
   </a>
@@ -489,6 +482,18 @@
   </li>
 
     
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../AvisoLocal/" class="md-nav__link">
+      Aviso
+    </a>
+  </li>
+
+    
   </ul>
 </nav>
                   </div>
@@ -535,13 +540,6 @@
         <li class="md-nav__item">
   <a href="#instalar-o-ribafslaravel7-acl" class="md-nav__link">
     Instalar o ribafs/laravel7-acl
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#publicar" class="md-nav__link">
-    Publicar
   </a>
   
 </li>
@@ -609,14 +607,19 @@ php artisan ui bootstrap --auth
 <h3 id="criar-e-configurar-o-banco">Criar e configurar o banco</h3>
 <p>.env</p>
 <h2 id="instalar-o-ribafslaravel7-acl">Instalar o ribafs/laravel7-acl</h2>
-<table class="bash codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="bash codehilite"><pre><span></span><code>composer require ribafs/laravel7-acl
+<table class="bash codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="bash codehilite"><pre><span></span><code>composer require ribafs/laravel7-acl
+<span class="sb">``</span>
+
+<span class="c1">## Publicar</span>
+<span class="sb">```</span>bash
+php artisan vendor:publish --provider<span class="o">=</span><span class="s2">&quot;Ribafs\Laravel7Acl\Laravel7AclServiceProvider&quot;</span>
 </code></pre></div>
 </td></tr></table>
-<h2 id="publicar">Publicar</h2>
-<table class="bash codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="bash codehilite"><pre><span></span><code>php artisan vendor:publish --provider<span class="o">=</span><span class="s2">&quot;Ribafs\Laravel7Acl\Laravel7AclServiceProvider&quot;</span>
-</code></pre></div>
-</td></tr></table>
-<p>Agora todos os arquivos do pacote já estão em seu aplicativo: migrations, seeders, Models, middleware, provider, etc</p>
 <h2 id="copiar-alguns-arquivos-existentes">Copiar alguns arquivos existentes</h2>
 <p>Como este pacote não sobrescreve arquivos existestes, então você precisará executar o comando copy:files (veja abaixo) para copiar sobrescrevendo os arquivos abaixo:</p>
 <ul>
@@ -630,6 +633,7 @@ php artisan ui bootstrap --auth
 <table class="bash codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="bash codehilite"><pre><span></span><code>php artisan copy:files
 </code></pre></div>
 </td></tr></table>
+<p>Agora todos os arquivos do pacote já estão em seu aplicativo: migrations, seeders, Models, middleware, provider, etc</p>
 <h3 id="ajustar-o-titulo-do-aplicativo-opcional">Ajustar o título do aplicativo (opcional)</h3>
 <p>Editar o .env e mudar a linha com APP_NAME, para algo como: APP_NAME='ACL to Laravel 8'</p>
 <h2 id="executar_1">Executar</h2>
@@ -643,7 +647,7 @@ localhost:8000/login
 </td></tr></table>
 <p>Use como exemplo:</p>
 <ul>
-<li>super@gmail.com</li>
+<li>super@mail.org</li>
 <li>123456</li>
 </ul>
 <p>Depois teste com os demais: admin, manager e user</p>
