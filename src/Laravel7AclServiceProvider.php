@@ -45,46 +45,21 @@ class Laravel7AclServiceProvider extends ServiceProvider
             __DIR__.'/../config/laravel7-acl.php' => config_path('laravel7-acl.php'),
         ], 'laravel7-acl.config');
 
-        // Publishing the migrations.
+        // Publishing the database.
         $this->publishes([
-            __DIR__.'/../up/migrations/' => base_path('database/migrations/'),
-        ], 'laravel7-acl.nigrations');
+            __DIR__.'/../up/database/' => base_path('database/'),
+        ], 'laravel7-acl.database');
 
-        // Publishing seeders.
-        $this->publishes([
-            __DIR__.'/../up/seeds/' => base_path('database/seeds/'),
-        ], 'laravel7-acl.seeders');
-
-        // Publishing models.
+        // Publishing app.
         $this->publishes([
             __DIR__.'/../up/app/' => app_path(),
-        ], 'laravel7-acl.models');
+        ], 'laravel7-acl.app');
 
-        // Publishing the controllers.
+        // Publishing the resources.
         $this->publishes([
-            __DIR__.'/../up/Controllers/' => app_path('Http/Controllers/'),
-        ], 'laravel7-acl.controllers');
+            __DIR__.'/../up/resources/' => base_path('resources/'),
+        ], 'laravel7-acl.resources');
 
-        // Publishing the views.
-        $this->publishes([
-            __DIR__.'/../up/views/' => base_path('resources/views/'),
-        ], 'laravel7-acl.viewss');
-
-        // Publishing provider.
-        $this->publishes([
-            __DIR__.'/../up/PermissionsServiceProvider.php' => app_path('Providers/PermissionsServiceProvider.php'),
-        ], 'laravel7-acl.provider');
-
-        // Publishing Middleware.
-        $this->publishes([
-            __DIR__.'/../up/RoleMiddleware.php' => app_path('Http/Middleware/RoleMiddleware.php'),
-        ], 'laravel7-acl.middleware');
-
-        // Publishing trait.
-        $this->publishes([
-            __DIR__.'/../up/HasPermissionsTrait.php' => app_path('Traits/HasPermissionsTrait.php'),
-        ], 'laravel7-acl.trait');
-    
         // Publishing commands.
         $this->publishes([
             __DIR__.'/../up/Commands/' => app_path('Console/Commands/'),
