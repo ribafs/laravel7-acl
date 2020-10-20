@@ -75,6 +75,12 @@ Se deseja um pacote para usar com a versão 8 do laravel, clique abaixo:
 
 [https://github.com/ribafs/laravel8-acl](https://github.com/ribafs/laravel8-acl)
 
+## Versão para o Laravel 6
+
+Se deseja um pacote para usar com a versão 6 do laravel, clique abaixo:
+
+[https://github.com/ribafs/laravel6-acl](https://github.com/ribafs/laravel6-acl)
+
 ## Versão para o Laravel 5.8
 
 Se deseja um pacote para usar com a versão 5.8 do laravel, clique abaixo:
