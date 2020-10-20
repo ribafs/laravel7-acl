@@ -73,7 +73,7 @@ As informações acima e muito mais informações de como tirar o máximo provei
 
 Se deseja um pacote para usar com a versão 8 do laravel, clique abaixo:
 
-[https://github.com/ribafs/laravel8-acl](https://github.com/ribafs/laravel8-acl)
+[https://github.com/ribafs/laravel-acl](https://github.com/ribafs/laravel-acl)
 
 ## Versão para o Laravel 6
 
