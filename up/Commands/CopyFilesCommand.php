@@ -8,7 +8,7 @@ class CopyFilesCommand extends Command
 {
     protected $signature = 'copy:files';
 
-    protected $description = 'Copy files from package laravel8acl to this application';
+    protected $description = 'Copy files from package laravel7acl to this application';
 
     public function __construct()
     {
