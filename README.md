@@ -68,6 +68,11 @@ As informações acima e muito mais informações de como tirar o máximo provei
 
 [https://ribafs.github.io/laravel7-acl/](https://ribafs.github.io/laravel7-acl/)
 
+## Versão para o Laravel 8 com aplicactivos existentes
+
+Se deseja um pacote para usar com a versão 8 do laravel com aplicativo existente, clique abaixo:
+
+[https://github.com/ribafs/laravel-acl-exist](https://github.com/ribafs/laravel-acl-exist)
 
 ## Versão para o Laravel 8
 
