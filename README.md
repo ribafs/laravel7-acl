@@ -13,7 +13,7 @@ laravel new acl7 --auth
 
 cd acl7
 
-composer require laravel/ui --dev
+composer require laravel/ui:^2.4
 php artisan ui bootstrap --auth
 npm install && npm run dev
 npm audit fix
