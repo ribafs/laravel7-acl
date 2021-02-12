@@ -51,7 +51,7 @@ Editar o .env e mudar a linha com APP_NAME, para algo como: APP_NAME='ACL to Lar
 
 Após adicionar seu CRUD, execute e teste o ACL no controle do acesso do seu aplicativo.
 ```bash
-php artisan migrate --seed
+php artisan migrate --seed (Este comando está provodanco o erro "Target class [PermissionsSeeder] does not exist.". Que ainda não corrigi mas descobri por acaso que se importar o banco com os dados ao invés de executar este comando funciona normalmente. Então trouxe o script laravel7-acl.sql que pode ser importado ao invés de executar este comando, pelo menos enquanto descobrimos como resolver. Lembrando queu a versão 8 funciona bem - https://github.com/ribafs/laravel-ac)
 php artisan serve
 localhost:8000/login
 ```
