@@ -52,7 +52,8 @@ Editar o .env e mudar a linha com APP_NAME, para algo como: APP_NAME='ACL to Lar
 
 Após adicionar seu CRUD, execute e teste o ACL no controle do acesso do seu aplicativo.
 ```bash
-php artisan migrate --seed 
+php artisan migrate
+php artisan db:seed
 php artisan serve
 localhost:8000/login
 ```
