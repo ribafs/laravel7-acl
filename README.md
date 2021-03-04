@@ -9,15 +9,16 @@ Usando roles, permissions, trait, middleware, provider, etc
 
 ### Criar um novo aplicativo com laravel 7
 ```bash
+Usando o installer
 laravel new acl7 --auth
 
+Usando o composer
+composer create-project --prefer-dist laravel/laravel:^7.30 acl7
 cd acl7
-
 composer require laravel/ui:^2.4
 php artisan ui bootstrap --auth
 npm install && npm run dev
-npm audit fix
-```
+``
 
 ### Criar e configurar o banco
 
